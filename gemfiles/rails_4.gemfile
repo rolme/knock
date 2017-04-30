@@ -6,6 +6,7 @@ gem "codeclimate-test-reporter", :group => :test, :require => nil
 gem "simplecov", :require => false, :group => :test
 gem "rack", "< 2"
 gem "rails", "~> 4.2.6"
+gem "httparty", ">= 0.14"
 
 group :development do
   gem "bundler"

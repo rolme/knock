@@ -19,7 +19,7 @@ module Knock
 
     def authorized(strategy)
       strategy_klass = "#{strategy[:type]}_strategy".classify.constantize
-      strategy_klass.authorized? strategy['token']
+      strategy_klass.authorized?(strategy['token'], strategy['uuid'])
     end
 
     def auth_token
