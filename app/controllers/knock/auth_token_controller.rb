@@ -10,7 +10,7 @@ module Knock
 
   private
     def authenticate
-      return if auth_params[:strategy].present? && authorized auth_params[:strategy]
+      return if auth_params[:strategy].present? && authorized(auth_params[:strategy])
 
       unless entity.present? && entity.authenticate(auth_params[:password])
         raise Knock.not_found_exception_class
